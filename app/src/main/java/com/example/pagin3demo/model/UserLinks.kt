@@ -1,5 +1,8 @@
 package com.example.pagin3demo.model
 
-data class UserLinks(
+import kotlinx.serialization.Serializable
 
+@Serializable
+data class UserLinks(
+    val html: String
 )
