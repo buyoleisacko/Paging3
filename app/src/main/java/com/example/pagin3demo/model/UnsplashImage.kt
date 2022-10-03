@@ -1,4 +1,12 @@
 package com.example.pagin3demo.model
 
-class UnsplashImage {
-}
+import androidx.room.Entity
+
+
+@Entity(tableName = )
+data class UnsplashImage (
+    val id: String,
+    val urls: Urls,
+    val likes: Int,
+    val user: User
+)
