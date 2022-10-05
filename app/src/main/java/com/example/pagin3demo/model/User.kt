@@ -13,4 +13,6 @@ data class User(
     val userName: String
 
 
-)
+) {
+    val username: String = ""
+}
