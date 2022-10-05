@@ -9,7 +9,7 @@ import com.example.pagin3demo.model.data.local.dao.UnsplashDatabase
 import com.example.pagin3demo.model.data.paging.UnsplashRemoteMediator
 import com.example.pagin3demo.model.data.remote.UnsplashApi
 import com.example.pagin3demo.ui.util.Constants.ITEMS_PER_PAGE
-import java.util.concurrent.Flow
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class Repository @Inject constructor(
@@ -26,15 +26,6 @@ class Repository @Inject constructor(
                 unsplashDatabase = unsplashDatabase
             ),
             pagingSourceFactory = pagingSourceFactory
-        ).flow
-    }
-
-    fun searchImages(query: String): Flow<PagingData<UnsplashImage>> {
-        return Pager(
-            config = PagingConfig(pageSize = ITEMS_PER_PAGE),
-            pagingSourceFactory = {
-                SearchPagingSource(unsplashApi = unsplashApi, query = query)
-            }
         ).flow
     }
 }
