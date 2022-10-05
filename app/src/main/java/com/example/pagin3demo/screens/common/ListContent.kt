@@ -70,7 +70,7 @@ fun UnsplashItem(unsplashImage: UnsplashImage) {
             .clickable {
                 val browserIntent = Intent(
                     Intent.ACTION_VIEW,
-                    Uri.parse("https://unsplash.com/@${unsplashImage.user.username}?utm_source=DemoApp&utm_medium=referral")
+                    Uri.parse("https://unsplash.com/@${unsplashImage.user.userName}?utm_source=DemoApp&utm_medium=referral")
                 )
                 startActivity(context, browserIntent, null)
             }
@@ -103,7 +103,7 @@ fun UnsplashItem(unsplashImage: UnsplashImage) {
                 text = buildAnnotatedString {
                     append("Photo by ")
                     withStyle(style = SpanStyle(fontWeight = FontWeight.Black)) {
-                        append(unsplashImage.user.username)
+                        append(unsplashImage.user.userName)
                     }
                     append(" on Unsplash")
                 },
@@ -132,10 +132,11 @@ fun LikeCounter(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.End
     ) {
+
         Icon(
             painter = painter,
             contentDescription = "Heart Icon",
-            tint = HeartRed
+            tint = HeartRed()
         )
         Divider(modifier = Modifier.width(6.dp))
         Text(
@@ -147,6 +148,10 @@ fun LikeCounter(
             overflow = TextOverflow.Ellipsis
         )
     }
+}
+
+fun Icon(painter: Painter, contentDescription: String, tint: HeartRed) {
+    TODO("Not yet implemented")
 }
 
 @ExperimentalCoilApi
@@ -161,4 +166,8 @@ fun UnsplashImagePreview() {
             user = User(username = "Stevdza-San", userLinks = UserLinks(html = ""))
         )
     )
+}
+
+fun User(username: String, userLinks: UserLinks): User {
+    TODO("Not yet implemented")
 }

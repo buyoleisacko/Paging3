@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "787913498711",
+    "project_id": "paging-demo-app",
+    "storage_bucket": "paging-demo-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787913498711:android:e9a7879f7e068be276c312",
+        "android_client_info": {
+          "package_name": "com.example.pagin3demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787913498711-lflelmlvg9n6l245r91unj2ajs2jev2s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQtFDeoeUftdEiQNFKM3t22djHUZD5KyE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787913498711-lflelmlvg9n6l245r91unj2ajs2jev2s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
